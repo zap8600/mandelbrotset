@@ -20,8 +20,8 @@ int main()
 		CNFGClearFrame();
 		CNFGGetDimensions( &w, &h );
 
-		for(int xZ = 0; xZ < w; x++) {
-            for(int yZ = 0; yZ < h; y++) {
+		for(int xZ = 0; xZ < w; xZ++) {
+            for(int yZ = 0; yZ < h; yZ++) {
                 int x = 0;
                 int y = 0;
 
