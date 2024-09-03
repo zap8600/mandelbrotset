@@ -23,7 +23,7 @@ int main()
 
 		for(int xZ = 0; xZ < w; xZ++) {
             for(int yZ = 0; yZ < h; yZ++) {
-                printf("x: %d, y: %d\n" xZ, yZ);
+                printf("x: %d, y: %d\n", xZ, yZ);
                 int x = 0;
                 int y = 0;
 
