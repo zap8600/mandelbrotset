@@ -23,7 +23,7 @@ int main()
 
 		for(int xT = 0; xT < w; xT++) {
             for(int yT = 0; yT < h; yT++) {
-                float xZ = (((float)xT / (float)w) * ((float)w / (float)h));
+                float xZ = (((float)xT / (float)w) * ((float)w / (float)h) * 0.47f);
                 float yZ = ((float)yT / (float)h);
 
                 float x = 0.0f;
