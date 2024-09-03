@@ -21,17 +21,19 @@ int main()
 		CNFGClearFrame();
 		CNFGGetDimensions( &w, &h );
 
-		for(int xZ = 0; xZ < w; xZ++) {
-            for(int yZ = 0; yZ < h; yZ++) {
-                printf("x: %d, y: %d\n", xZ, yZ);
-                int x = 0;
-                int y = 0;
+		for(int xT = 0; xT < w; xT++) {
+            for(int yT = 0; yT < h; yT++) {
+                float xZ = (((float)xT / (float)w) * ((float)w / (float)h));
+                float yZ = ((float)yT / (float)h);
+
+                float x = 0.0f;
+                float y = 0.0f;
 
                 int iteration = 0;
                 int max_iteration = 0;
 
                 while(x*x + y*y <= (2*2) && iteration < max_iteration) {
-                    int xtemp = x*x - y*y + xZ;
+                    float xtemp = x*x - y*y + xZ;
                     y = 2*x*y + yZ;
 
                     x = xtemp;
@@ -41,10 +43,10 @@ int main()
 
                 if(iteration == max_iteration) {
                     CNFGColor(0x00000000);
-                    CNFGTackPixel(xZ, yZ);
+                    CNFGTackPixel(xT, yT);
                 } else {
                     CNFGColor(iteration);
-                    CNFGTackPixel(xZ, yZ);
+                    CNFGTackPixel(xT, yT);
                 }
             }
         }
